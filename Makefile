@@ -1,4 +1,4 @@
-OBJECT_DIR= /home/tj/softwares/x-stream
+OBJECT_DIR= /home/tjmaster/ProgramProjects/CLionProjects/x-stream
 UTILS_SRC= utils.o
 LIBS_SRC= core.o $(UTILS_SRC)
 LIBS= $(addprefix $(OBJECT_DIR)/, $(LIBS_SRC))
@@ -109,8 +109,8 @@ clean:
 	rm -f $(TARGETS) $(LIBS) $(OBJECT_DIR)/*
 	$(MAKE) -C generators clean
 
-prefix = /usr/local
-bindir = $(prefix)/bin
+prefix = /usr/local/xstream
+bindir = $(prefix)
 .PHONY: install uninstall
 install: all
 	cp bin/benchmark_driver $(bindir)
